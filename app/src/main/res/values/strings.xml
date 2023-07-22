@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Growigh Assignment</string>
+    <string name="skip_intro">Skip intro</string>
+    <string name="about_us">About Us</string>
+    <string name="on_boarding_page_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</string>
+    <string name="our_mission">Our Mission</string>
+    <string name="our_vision">Our Vision</string>
 </resources>

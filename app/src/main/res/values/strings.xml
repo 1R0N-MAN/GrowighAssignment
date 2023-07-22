@@ -5,4 +5,7 @@
     <string name="on_boarding_page_body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</string>
     <string name="our_mission">Our Mission</string>
     <string name="our_vision">Our Vision</string>
+    <string name="welcome_text">Welcome Ayush</string>
+    <string name="feeds">Feeds</string>
+    <string name="upload_image">Upload Image</string>
 </resources>

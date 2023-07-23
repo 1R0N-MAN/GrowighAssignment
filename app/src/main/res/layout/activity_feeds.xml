@@ -6,4 +6,144 @@
     android:layout_height="match_parent"
     tools:context=".FeedsActivity">
 
+    <View
+        android:id="@+id/background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30012152" />
+
+    <TextView
+        android:id="@+id/helloTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
+        android:textSize="20sp"
+        android:textColor="#F9F9FB"
+        android:fontFamily="@font/noto_sans"
+        android:lineHeight="27sp"
+        android:lineSpacingExtra="-3sp"
+        android:gravity="center_vertical"
+        android:layout_marginHorizontal="@dimen/app_page_padding"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:text="@string/user_name"
+        android:textSize="30sp"
+        android:textColor="#F9F9FB"
+        android:fontFamily="@font/noto_sans"
+        android:lineHeight="27sp"
+        android:lineSpacingExtra="-3sp"
+        android:gravity="center_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/helloTextView"
+        android:layout_marginHorizontal="@dimen/app_page_padding"
+        />
+
+    <ImageView
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_margin="@dimen/app_page_padding"
+        android:src="@drawable/ellipse"
+        app:layout_constraintTop_toTopOf="@id/helloTextView"
+        app:layout_constraintBottom_toBottomOf="@id/usernameTextView"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar"
+        android:layout_margin="@dimen/app_page_padding"
+        android:drawableStart="@drawable/ic_search"
+        android:padding="10dp"
+        android:hint="@string/explore"
+        android:textColorHint="@color/black_custom"
+        android:drawableTint="@color/black_custom"
+        android:drawablePadding="5dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:layout_constraintTop_toBottomOf="@id/usernameTextView"
+        app:layout_constraintBottom_toBottomOf="@id/background"/>
+
+    <TextView
+        android:id="@+id/browse_by"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/browse_by"
+        android:textSize="20sp"
+        android:textColor="#1E1E1E"
+        android:fontFamily="@font/noto_sans"
+        android:lineHeight="25sp"
+        android:lineSpacingExtra="-3sp"
+        android:gravity="center_vertical"
+        android:layout_margin="@dimen/app_margin_size"
+        app:layout_constraintTop_toBottomOf="@id/background"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/latestTag"
+        android:layout_width="96dp"
+        android:layout_height="21dp"
+        android:text="@string/latest"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:letterSpacing="-0.01"
+        android:textAllCaps="false"
+        android:fontFamily="@font/noto_sans"
+        android:lineHeight="15sp"
+        android:background="@drawable/tag_btn_bg"
+        android:layout_margin="@dimen/app_margin_size"
+        app:layout_constraintTop_toBottomOf="@id/browse_by"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/olderTag"
+        android:layout_width="96dp"
+        android:layout_height="21dp"
+        android:text="@string/older"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:letterSpacing="-0.01"
+        android:textAllCaps="false"
+        android:fontFamily="@font/noto_sans"
+        android:lineHeight="15sp"
+        android:background="@drawable/tag_btn_bg"
+        android:layout_margin="@dimen/app_margin_size"
+        app:layout_constraintTop_toBottomOf="@id/browse_by"
+        app:layout_constraintStart_toEndOf="@id/latestTag"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/app_margin_size"
+        app:layout_constraintTop_toBottomOf="@id/latestTag"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/feedsContentRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/feeds_content_item_layout"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

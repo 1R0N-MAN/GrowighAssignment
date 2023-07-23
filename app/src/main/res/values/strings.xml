@@ -8,4 +8,17 @@
     <string name="welcome_text">Welcome Ayush</string>
     <string name="feeds">Feeds</string>
     <string name="upload_image">Upload Image</string>
+    <string name="hello">Hello,</string>
+    <string name="user_name">Ayush</string>
+    <string name="explore">Explore</string>
+    <string name="browse_by">Browse By</string>
+    <string name="latest">Latest</string>
+    <string name="older">Older</string>
+    <string name="the_verge">The Verge</string>
+    <string name="tech_news">Tech News</string>
+    <string name="meta_explains">Meta explains how AI influences what we see on Facebook and Instagram</string>
+    <string name="comment_count">View all 9 Comments</string>
+    <string name="no_of_likes">21 likes</string>
+    <string name="no_of_comments">9 Comments</string>
+    <string name="share">Share</string>
 </resources>

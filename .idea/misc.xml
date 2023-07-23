@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/drawable/background.xml" value="0.1" />
         <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/drawable/blue_card_bg.xml" value="0.1475" />
         <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/drawable/button_primary.xml" value="0.1" />
         <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/drawable/button_small.xml" value="0.1" />
+        <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/drawable/search_bar.xml" value="0.1" />
+        <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/drawable/tag_btn_bg.xml" value="0.1" />
+        <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/layout/activity_feeds.xml" value="0.18" />
         <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/layout/activity_home.xml" value="0.17" />
         <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/layout/activity_on_boarding.xml" value="0.16" />
+        <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/layout/feeds_content_item_layout.xml" value="0.2" />
         <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/layout/fragment_on_boarding_page1.xml" value="0.14965277777777777" />
         <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/layout/fragment_on_boarding_page2.xml" value="0.14965277777777777" />
         <entry key="..\:/Users/IronMan/Desktop/Me/AndroidStudio/MyWork/GrowighAssignment/app/src/main/res/layout/fragment_on_boarding_page3.xml" value="0.14965277777777777" />

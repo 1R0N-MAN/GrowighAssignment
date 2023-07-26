@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <VideoView
+        android:id="@+id/videoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <com.like.LikeButton
+        android:id="@+id/videoLikeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/app_margin_size"
+        android:layout_marginBottom="@dimen/app_page_padding"
+        app:icon_type="heart"
+        app:icon_size="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/commentButton"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/commentButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="@dimen/app_page_padding"
+        android:layout_marginEnd="@dimen/app_page_padding"
+        android:src="@drawable/message_icon"
+        android:scaleType="fitCenter"
+        app:tint="#9C9C9C"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/shareButton"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/shareButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="@dimen/app_page_padding"
+        android:layout_marginEnd="@dimen/app_page_padding"
+        android:src="@drawable/share_icon"
+        android:scaleType="fitCenter"
+        app:tint="#9C9C9C"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/moreButton"/>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/moreButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="150dp"
+        android:layout_marginEnd="@dimen/app_page_padding"
+        android:src="@drawable/ic_more_vertical"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        app:tint="#9C9C9C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/app_page_padding"
+        android:textSize="11sp"
+        android:letterSpacing="0.03"
+        android:textColor="#D8D8D8"
+        android:lineHeight="20sp"
+        android:fontFamily="@font/roboto"
+        android:lineSpacingExtra="7sp"
+        tools:text="Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/moreButton"
+        app:layout_constraintBottom_toBottomOf="@id/moreButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

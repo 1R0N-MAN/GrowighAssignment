@@ -22,4 +22,8 @@
     <string name="no_of_comments">9 Comments</string>
     <string name="share">Share</string>
     <string name="select_image">Select Image</string>
+    <string name="home">Home</string>
+    <string name="videos">Videos</string>
+    <string name="map">Map</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

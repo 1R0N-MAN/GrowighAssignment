@@ -84,8 +84,18 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="@dimen/app_margin_size" />
 
+    <com.like.LikeButton
+        android:id="@+id/likeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/app_margin_size"
+        app:icon_type="heart"
+        app:icon_size="11dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewComments"/>
+
     <TextView
-        android:id="@+id/likes"
+        android:id="@+id/noOfLikesTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/no_of_likes"
@@ -95,49 +105,76 @@
         android:fontFamily="@font/roboto"
         android:lineHeight="20sp"
         android:lineSpacingExtra="7sp"
-        android:layout_marginTop="@dimen/app_margin_size"
+        android:layout_marginStart="5dp"
         android:gravity="center"
-        android:drawablePadding="5dp"
-        app:drawableStartCompat="@drawable/valentines_heart"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewComments" />
+        app:layout_constraintStart_toEndOf="@id/likeButton"
+        app:layout_constraintTop_toTopOf="@id/likeButton"
+        app:layout_constraintBottom_toBottomOf="@id/likeButton"/>
 
-    <TextView
-        android:id="@+id/comments"
+    <LinearLayout
+        android:id="@+id/commentsLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/no_of_comments"
-        android:textSize="11sp"
-        android:letterSpacing="0.03"
-        android:textColor="#1E1E1E"
-        android:fontFamily="@font/roboto"
-        android:lineHeight="20sp"
-        android:lineSpacingExtra="7sp"
-        android:gravity="center"
-        android:drawablePadding="5dp"
-        app:drawableStartCompat="@drawable/message_icon"
-        app:layout_constraintStart_toEndOf="@id/likes"
-        app:layout_constraintEnd_toStartOf="@id/share"
-        app:layout_constraintTop_toTopOf="@id/likes"
-        app:layout_constraintBottom_toBottomOf="@id/likes" />
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/noOfLikesTextView"
+        app:layout_constraintEnd_toStartOf="@id/shareLinearLayout"
+        app:layout_constraintTop_toTopOf="@id/noOfLikesTextView"
+        app:layout_constraintBottom_toBottomOf="@id/noOfLikesTextView">
 
-    <TextView
-        android:id="@+id/share"
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/commentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/message_icon"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/noOfCommentsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_of_comments"
+            android:textSize="11sp"
+            android:letterSpacing="0.03"
+            android:textColor="#1E1E1E"
+            android:fontFamily="@font/roboto"
+            android:lineHeight="20sp"
+            android:lineSpacingExtra="7sp"
+            android:layout_marginStart="5dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shareLinearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/share"
-        android:textSize="11sp"
-        android:letterSpacing="0.03"
-        android:textColor="#1E1E1E"
-        android:fontFamily="@font/roboto"
-        android:lineHeight="20sp"
-        android:lineSpacingExtra="7sp"
-        android:gravity="center"
-        android:drawablePadding="5dp"
-        app:drawableStartCompat="@drawable/share_icon"
-        app:layout_constraintStart_toEndOf="@id/comments"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/commentsLinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/likes"
-        app:layout_constraintBottom_toBottomOf="@id/likes" />
+        app:layout_constraintTop_toTopOf="@id/noOfLikesTextView"
+        app:layout_constraintBottom_toBottomOf="@id/noOfLikesTextView">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/shareButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_icon"
+            android:scaleType="fitCenter"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/shareTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share"
+            android:textSize="11sp"
+            android:letterSpacing="0.03"
+            android:textColor="#1E1E1E"
+            android:fontFamily="@font/roboto"
+            android:lineHeight="20sp"
+            android:lineSpacingExtra="7sp"
+            android:layout_marginStart="5dp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
